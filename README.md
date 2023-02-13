@@ -146,7 +146,7 @@ For binary tree of height h:
 
 For N nodes, min height is O(logN) and we want to avoid height = O(N) (max height)
 
-![Tree Binary](images/maxheight.png)
+![Tree Binary](images/MaxHeight.png)
 
 ## Implementation of Binary Trees
 
@@ -233,7 +233,7 @@ To insert(add) x into BST T proceed down the tree as you would with a contains.
 * (ii) Otherwise, insert x at the last spot on the path traversed.
 
 Example: insert(5)
-![insert Tree](images/insert.png)
+![insert Tree](images/Insert.png)
 
 ```java
 /**
@@ -332,7 +332,7 @@ First option: insert the elements in a given order.
 	* O(N<sup>2</sup>)
 
 
-![insert Tree](images/MaxHeight2.png)
+![insert Tree](images/maxHeight2.png)
 
 Second option: insert the elements in the reverser order?
 
