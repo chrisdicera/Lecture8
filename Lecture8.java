@@ -1,3 +1,6 @@
+import java.security.Key;
+import java.time.chrono.MinguoChronology;
+
 // A class to store a binary tree node
 class Node
 {
@@ -14,7 +17,30 @@ class Lecture8
     // Recursive function to check if a given binary tree is a sum tree or not
     public static int isSumTree(Node root)
     {
-        //TODO
+
+        //used to check for leaf nodes 
+
+        if (root.left == null && root.right == null){
+
+
+            return root.key;
+
+        }
+        int left = isSumTree(root.left);
+        int right = isSumTree(root.right);
+
+        if (left != Integer.MIN_VALUE && right != Integer.MIN_VALUE && left + right == root.key){
+
+            System.out.println(left + "left");   
+            System.out.println(root.key+"node");
+            System.out.println(right + "right");
+            return root.key * 2; 
+
+
+
+        }
+        
+
  
         return Integer.MIN_VALUE;
     }
@@ -37,6 +63,11 @@ class Lecture8
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
+
+
+
+
+        
  
         if (isSumTree(root) != Integer.MIN_VALUE) {
             System.out.println("Binary tree is a sum tree");
